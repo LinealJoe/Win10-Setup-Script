@@ -17,12 +17,22 @@
  - Trigger the setup script from the RMM
  - Go and do other more interesting things while this runs
 
- Comments, corrections or improvements welcome
-
-## Notes
-
+ Comments, corrections or improvements welcomed
 
 ## Examples
+
+#### Define a custom log file location
+By default, logs will be dropped into C:\Windows\Temp. Specify the "logFile" parameter to put it somewhere of your chosing:
+
+    Start-Windows10InitialSetup.ps1 -logFile "C:\Logging\Build"
+
+#### Define a custom device name
+If you intend to rename the device to match a corporate asset ID system (particularly helpful when tallying with an RMM later on) the specify the "assetID" parameter:
+
+    Start-Windows10InitialSetup.ps1 -assetID "12345"
+
+*Note:* The asset ID function adds the ID number to a corporate prefix. If you need to amend or remove this, edit the *New-CompanyAssetName* function.
+
 
 ## Script Actions
 
